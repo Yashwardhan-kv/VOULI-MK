@@ -17,7 +17,7 @@ def assistant_speaks(output):
 
 	toSpeak = gTTS(text = output, lang ='en', slow = False) 
 	# saving the audio file given by google text to speech 
-	file = str(num)+".mp3 
+	file = str(num)+".mp3" 
 	toSpeak.save(file) 
 	
 	# playsound package is used to play the same file. 
@@ -52,10 +52,10 @@ def get_audio():
 
 # Driver Code 
 if __name__ == "__main__": 
-	assistant_speaks("What's your name, Human?") 
-	name ='Human'
+	assistant_speaks("What's your name, Vouli?") 
+	name ='Vouli'
 	name = get_audio() 
-	assistant_speaks("Hello, " + name + '.') 
+	assistant_speaks("Hello, " + yash + '.') 
 	
 	while(1): 
 
@@ -66,7 +66,7 @@ if __name__ == "__main__":
 			continue
 
 		if "exit" in str(text) or "bye" in str(text) or "sleep" in str(text): 
-			assistant_speaks("Ok bye, "+ name+'.') 
+			assistant_speaks("Ok bye, "+ yash +'.') 
 			break
 
 		# calling process text to process the query 
@@ -86,7 +86,7 @@ def process_text(input):
 			return
 
 		elif "who made you" in input or "created you" in input: 
-			speak = "I have been created by Sheetansh Kumar."
+			speak = "I have been created by yash."
 			assistant_speaks(speak) 
 			return
 
