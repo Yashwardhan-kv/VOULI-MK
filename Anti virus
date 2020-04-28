@@ -1,0 +1,24 @@
+@echo off
+title Antivirus by SHIVARUDHRA
+echo Antivirus
+echo created by SHIVARUDHRA
+echo scanning....
+echo scanning....
+:start
+IF EXIST virus.bat goto infected
+IF NOT EXIST virus.bat goto clean
+cd c:\windows\system32
+
+
+: infected
+echo WARNING VIRUS DETECTED!!!!
+del virus.bat
+pause
+goto start
+
+
+:clean
+echo  SYSTEM PROTECTED!!!
+pause
+start
+exit
